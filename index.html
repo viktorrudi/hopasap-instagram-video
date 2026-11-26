@@ -14,7 +14,7 @@ html, body { margin: 0; width: 1080px; height: 1920px; background: #000; overflo
 #logo-end { z-index: 10; }
 #captions { z-index: 20; }
 </style></head><body>
-<div data-hf-id="hf-vyf4" id="root" data-composition-id="main" data-start="0" data-duration="19.4" data-width="1080" data-height="1920" data-fps="30">
+<div data-hf-id="hf-vyf4" id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1080" data-height="1920" data-fps="30">
 <!-- Footage: processed copies of the originals in assets/clips/ (SDR tone-mapped, number plates blurred, voice-cleaned and loudness-normalised audio). Same timing as the originals, so trims stay valid. -->
 <video data-hf-id="hf-vauk" id="clip-01-img-4752" class="footage" src="assets/clips/processed/IMG_4752.mp4" data-start="0" data-duration="5.832" data-media-start="0.51" data-track-index="1" data-has-audio="true" data-volume="1" playsinline preload="metadata" aria-label="01 IMG_4752"></video>
 <video data-hf-id="hf-mt57" id="clip-02-img-4754-split" class="footage" src="assets/clips/processed/IMG_4754.mp4" data-start="5.84" data-duration="3.6" data-media-start="1.601" data-track-index="1" data-has-audio="true" data-volume="1" playsinline preload="metadata" aria-label="02 IMG_4754"></video>
@@ -37,13 +37,15 @@ html, body { margin: 0; width: 1080px; height: 1920px; background: #000; overflo
 <audio id="sfx-glint-headlight" src="assets/sfx/el-glint.mp3" data-start="11.4" data-duration="1" data-media-start="0" data-track-index="6" data-volume="0.45"></audio>
 <audio id="sfx-cut-swoosh" src="assets/sfx/el-cut-swoosh.mp3" data-start="12.43" data-duration="0.6" data-media-start="0" data-track-index="4" data-volume="0.37"></audio>
 <audio id="sfx-glint-badge" src="assets/sfx/el-glint.mp3" data-start="12.88" data-duration="1" data-media-start="0" data-track-index="6" data-volume="0.45"></audio>
-<audio id="sfx-logo-on" src="assets/sfx/el-logo-on.mp3" data-start="16.16" data-duration="2.2" data-media-start="0" data-track-index="5" data-volume="0.4" data-fade-out="0.6"></audio>
+<audio id="sfx-logo-on" src="assets/sfx/el-logo-on.mp3" data-start="16.16" data-duration="1.5" data-media-start="0" data-track-index="5" data-volume="0.4" data-fade-out="0.6"></audio>
+<!-- End-card voiceover (ElevenLabs voice): "Již brzy v Brně a okolí." -->
+<audio id="vo-jiz-brzy" src="assets/audio/vo-jiz-brzy-v-brne.mp3" data-start="17" data-duration="2.35" data-media-start="0" data-track-index="7" data-volume="1.25"></audio>
 <!-- Car reveal light effects: impact flash, headlight streak and bloom, vignette, brand-orange light leak, sheen over the pan. -->
 <div id="car-hype" class="clip" data-composition-id="car-hype" data-composition-src="compositions/car-hype.html" data-start="10.47" data-duration="3.75" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
 <!-- End card: after the black pause the hopasap logo switches on like a sign and holds to the end. -->
-<div data-hf-id="hf-zlds" id="logo-end" class="clip" data-composition-id="logo-end" data-composition-src="compositions/logo-end.html" data-start="16.62" data-duration="2.78" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+<div data-hf-id="hf-zlds" id="logo-end" class="clip" data-composition-id="logo-end" data-composition-src="compositions/logo-end.html" data-start="16.62" data-duration="3.38" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
 <!-- Czech subtitles: one captions track. -->
-<div id="captions" class="clip" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="19.4" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920"></div>
+<div id="captions" class="clip" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="20" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920"></div>
 </div><script>
 (function () {
   var tl = gsap.timeline({ paused: true });

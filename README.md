@@ -1,6 +1,6 @@
 # hopasap — Instagram Reel (HyperFrames project)
 
-A 19.4 s vertical (1080 × 1920) Czech-language Instagram Reel for **hopasap**, built with [HyperFrames](https://hyperframes.heygen.com): HTML, CSS and GSAP rendered to video, and editable in the browser.
+A 20 s vertical (1080 × 1920) Czech-language Instagram Reel for **hopasap**, built with [HyperFrames](https://hyperframes.heygen.com): HTML, CSS and GSAP rendered to video, and editable in the browser.
 
 ▶ **Final video:** [`renders/hopasap-instagram-final.mp4`](renders/hopasap-instagram-final.mp4)
 
