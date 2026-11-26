@@ -1,0 +1,12 @@
+{
+  "name": "hopasap-instagram",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.9.96 preview",
+    "preview": "npx --yes hyperframes@0.9.96 preview --background",
+    "check": "npx --yes hyperframes@0.9.96 check",
+    "render": "npx --yes hyperframes@0.9.96 render --quality delivery --output renders/hopasap-instagram-final.mp4",
+    "publish": "npx --yes hyperframes@0.9.96 publish"
+  }
+}

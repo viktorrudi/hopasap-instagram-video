@@ -1,0 +1,17 @@
+# HyperFrames caches and local artifacts (regenerated automatically)
+.hyperframes/
+.transcode-cache/
+.thumbnails/
+.waveform-cache/
+.media/
+node_modules/
+.DS_Store
+
+# Original iPhone footage: unblurred number plates and GPS location metadata. Never publish.
+assets/clips/*.MOV
+assets/clips/*.mov
+source-metadata.json
+
+# Renders: only the final delivery is tracked
+renders/*
+!renders/hopasap-instagram-final.mp4

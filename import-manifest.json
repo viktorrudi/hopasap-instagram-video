@@ -1,0 +1,62 @@
+{
+  "sourceArchive": "Photos-1-001.zip (original iPhone export; originals are not in this repo)",
+  "orderBasis": "com.apple.quicktime.creationdate, cross-checked UTC creation_time",
+  "totalDuration": "46.606699",
+  "clips": [
+    {
+      "order": 1,
+      "filename": "IMG_4752.MOV",
+      "src": "assets/clips/IMG_4752.MOV",
+      "recordedAt": "2026-11-21T13:50:20+0100",
+      "recordedAtUTC": "2026-11-21T12:50:20.000000Z",
+      "start": "0",
+      "duration": "12.538333",
+      "end": "12.538333",
+      "sha256": "23be4899583be93481137e3e84b59f94df147715a1a26b162dbf3d4e9e9b5103"
+    },
+    {
+      "order": 2,
+      "filename": "IMG_4754.MOV",
+      "src": "assets/clips/IMG_4754.MOV",
+      "recordedAt": "2026-11-21T13:50:50+0100",
+      "recordedAtUTC": "2026-11-21T12:50:50.000000Z",
+      "start": "12.538333",
+      "duration": "5.201700",
+      "end": "17.740033",
+      "sha256": "aa3851af4c8ce446bc2346781d8d7beee46eb1f6036c35c3eb4b4c6e005daa25"
+    },
+    {
+      "order": 3,
+      "filename": "IMG_4755.MOV",
+      "src": "assets/clips/IMG_4755.MOV",
+      "recordedAt": "2026-11-21T13:51:55+0100",
+      "recordedAtUTC": "2026-11-21T12:51:55.000000Z",
+      "start": "17.740033",
+      "duration": "19.058333",
+      "end": "36.798366",
+      "sha256": "5014f9e4bac86d651a98a06b6cf0f2bfb7bce177bf6f50f4a5968d78d01b714a"
+    },
+    {
+      "order": 4,
+      "filename": "IMG_4756.MOV",
+      "src": "assets/clips/IMG_4756.MOV",
+      "recordedAt": "2026-11-21T14:12:01+0100",
+      "recordedAtUTC": "2026-11-21T13:12:01.000000Z",
+      "start": "36.798366",
+      "duration": "5.218333",
+      "end": "42.016699",
+      "sha256": "a8a439873d0b8e710d167041524754e90d7a2cba49f72a06c618c7fae959d090"
+    },
+    {
+      "order": 5,
+      "filename": "IMG_4757.MOV",
+      "src": "assets/clips/IMG_4757.MOV",
+      "recordedAt": "2026-11-21T14:12:21+0100",
+      "recordedAtUTC": "2026-11-21T13:12:21.000000Z",
+      "start": "42.016699",
+      "duration": "4.590000",
+      "end": "46.606699",
+      "sha256": "c799fe25d49fddd57e0b457a126d6b9a3a0f092db90a48034c197a24d6937668"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          overflow: visible;
+        }
+        /* One group on screen at a time, centred in the lower part of Instagram's safe band (168–1330 px). */
+        .cap-group {
+          position: absolute;
+          left: 0;
+          top: 1120px;
+          width: 1080px;
+          padding: 0 130px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 4px 10px;
+          opacity: 0;
+          visibility: hidden;
+          transform-origin: 50% 60%;
+        }
+        .w {
+          position: relative;
+          display: inline-block;
+          padding: 6px 14px 12px;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 800;
+          font-size: 70px;
+          line-height: 1.05;
+          letter-spacing: -0.01em;
+          color: #ffffff;
+          text-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 6px 18px rgba(0, 0, 0, 0.55);
+          transform-origin: 50% 60%;
+        }
+        .w .bg {
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+          border-radius: 16px;
+          background: #ff5a36;
+          box-shadow: 0 10px 26px rgba(255, 90, 54, 0.35);
+          opacity: 0;
+          transform: scaleX(0);
+          transform-origin: 0% 50%;
+        }
+        .w .t {
+          position: relative;
+          z-index: 1;
+        }
+        /* The brand name: brand orange on a near-black pill (the logo's reversed look), readable on any footage. */
+        .w.brand {
+          color: #ff5a36;
+          text-shadow: none;
+        }
+        .w.brand .bg {
+          background: #121212;
+          box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+        }
+      </style>
+
+      <div data-hf-id="hf-ov84" id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+        <div data-hf-id="hf-t3tv" class="cap-group" id="cap-01" data-layout-allow-safe-zone data-g-start="0.36" data-g-end="1.15"><span data-hf-id="hf-1v8w" class="w" data-w-start="0.4" data-w-end="0.52"><span data-hf-id="hf-mww8" class="bg"></span><span data-hf-id="hf-lufy" class="t">Ah,</span></span><span data-hf-id="hf-5aqm" class="w brand" data-w-start="0.56" data-w-end="1.02"><span data-hf-id="hf-zv5s" class="bg"></span><span data-hf-id="hf-652e" class="t">hopasap!</span></span></div>
+        <div data-hf-id="hf-6r22" class="cap-group" id="cap-02" data-g-start="1.24" data-g-end="2.5"><span data-hf-id="hf-ap3j" class="w" data-w-start="1.28" data-w-end="1.62"><span data-hf-id="hf-yo8p" class="bg"></span><span data-hf-id="hf-uioz" class="t">Skvělý,</span></span><span data-hf-id="hf-z101" class="w" data-w-start="1.66" data-w-end="1.8"><span data-hf-id="hf-z2jq" class="bg"></span><span data-hf-id="hf-fxh4" class="t">jdu</span></span><span data-hf-id="hf-1xlo" class="w" data-w-start="1.8" data-w-end="1.9"><span data-hf-id="hf-xvmn" class="bg"></span><span data-hf-id="hf-ywv6" class="t">na</span></span><span data-hf-id="hf-3x5d" class="w" data-w-start="1.9" data-w-end="2.08"><span data-hf-id="hf-y9xo" class="bg"></span><span data-hf-id="hf-c94w" class="t">to.</span></span></div>
+        <div data-hf-id="hf-q57e" class="cap-group" id="cap-03" data-g-start="6.27" data-g-end="6.88"><span data-hf-id="hf-8kfh" class="w" data-w-start="6.31" data-w-end="6.44"><span data-hf-id="hf-x30l" class="bg"></span><span data-hf-id="hf-s5gu" class="t">Ne,</span></span><span data-hf-id="hf-1ykd" class="w" data-w-start="6.44" data-w-end="6.57"><span data-hf-id="hf-xhbm" class="bg"></span><span data-hf-id="hf-k43y" class="t">ne,</span></span><span data-hf-id="hf-h0f0" class="w" data-w-start="6.57" data-w-end="6.74"><span data-hf-id="hf-waej" class="bg"></span><span data-hf-id="hf-lb11" class="t">ne!</span></span></div>
+        <div data-hf-id="hf-tnis" class="cap-group" id="cap-04" data-g-start="6.88" data-g-end="7.36"><span data-hf-id="hf-euru" class="w" data-w-start="6.92" data-w-end="7.12"><span data-hf-id="hf-wopk" class="bg"></span><span data-hf-id="hf-4inh" class="t">Tohle</span></span><span data-hf-id="hf-sl2l" class="w" data-w-start="7.14" data-w-end="7.36"><span data-hf-id="hf-6m1c" class="bg"></span><span data-hf-id="hf-qu73" class="t">není</span></span></div>
+        <div data-hf-id="hf-hl22" class="cap-group" id="cap-05" data-g-start="7.36" data-g-end="8.05"><span data-hf-id="hf-wfrd" class="w brand" data-w-start="7.38" data-w-end="7.82"><span data-hf-id="hf-67qb" class="bg"></span><span data-hf-id="hf-1rp3" class="t">hopasap.</span></span></div>
+        <div data-hf-id="hf-azui" class="cap-group" id="cap-06" data-g-start="8.15" data-g-end="8.95"><span data-hf-id="hf-jz52" class="w" data-w-start="8.22" data-w-end="8.36"><span data-hf-id="hf-5tfa" class="bg"></span><span data-hf-id="hf-sujp" class="t">Pojď</span></span><span data-hf-id="hf-5fop" class="w" data-w-start="8.38" data-w-end="8.56"><span data-hf-id="hf-5f49" class="bg"></span><span data-hf-id="hf-z2n9" class="t">sem!</span></span></div>
+        <div data-hf-id="hf-malo" class="cap-group" id="cap-07" data-layout-allow-safe-zone data-g-start="10.28" data-g-end="12.3"><span data-hf-id="hf-d350" class="w" data-w-start="10.34" data-w-end="10.6"><span data-hf-id="hf-50t8" class="bg"></span><span data-hf-id="hf-msye" class="t">Tohle</span></span><span data-hf-id="hf-z57a" class="w" data-w-start="11.34" data-w-end="11.46"><span data-hf-id="hf-4mi7" class="bg"></span><span data-hf-id="hf-vze2" class="t">je</span></span><span data-hf-id="hf-o7x6" class="w brand" data-w-start="11.48" data-w-end="12.02"><span data-hf-id="hf-4876" class="bg"></span><span data-hf-id="hf-vuum" class="t">hopasap.</span></span></div>
+      </div>
+
+      <script>
+        (function () {
+          // Czech subtitles. Each group shows over [data-g-start, data-g-end) and each word's pill
+          // lights over [data-w-start, data-w-end), in root-timeline seconds (this host starts at 0).
+          var tl = gsap.timeline({ paused: true });
+          var groups = document.querySelectorAll("#root .cap-group");
+          groups.forEach(function (g) {
+            var gs = parseFloat(g.getAttribute("data-g-start"));
+            var ge = parseFloat(g.getAttribute("data-g-end"));
+            tl.set(g, { visibility: "visible" }, gs);
+            tl.fromTo(
+              g,
+              { opacity: 0, scale: 0.86, y: 18 },
+              { opacity: 1, scale: 1, y: 0, duration: 0.16, ease: "back.out(1.6)" },
+              gs
+            );
+            g.querySelectorAll(".w").forEach(function (w) {
+              var ws = parseFloat(w.getAttribute("data-w-start"));
+              var we = parseFloat(w.getAttribute("data-w-end"));
+              var bg = w.querySelector(".bg");
+              var inDur = Math.min(0.12, Math.max(0.05, we - ws));
+              var isBrand = w.classList.contains("brand");
+              // The brand word sits on its dark pill for the whole group (readable on any background).
+              if (isBrand) tl.fromTo(bg, { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.14, ease: "power3.out", immediateRender: false }, gs);
+              else tl.to(bg, { opacity: 1, scaleX: 1, duration: inDur, ease: "power3.out" }, ws);
+              tl.fromTo(w, { scale: 1 }, { scale: 1.08, duration: inDur, ease: "power2.out" }, ws);
+              tl.to(w, { scale: 1, duration: 0.14, ease: "power2.inOut" }, we);
+              if (!isBrand) tl.to(bg, { opacity: 0, duration: 0.1, ease: "power2.in" }, we);
+            });
+            tl.to(g, { opacity: 0, duration: 0.1, ease: "power2.in" }, ge - 0.1);
+            tl.set(g, { opacity: 0, visibility: "hidden" }, ge);
+          });
+          window.__timelines["captions"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
