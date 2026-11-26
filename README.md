@@ -2,7 +2,7 @@
 
 A 20 s vertical (1080 × 1920) Czech-language Instagram Reel for **hopasap**, built with [HyperFrames](https://hyperframes.heygen.com): HTML, CSS and GSAP rendered to video, and editable in the browser.
 
-▶ **Final video:** [`renders/hopasap-instagram-final.mp4`](renders/hopasap-instagram-final.mp4)
+▶ **Final video:** run `npm run render`; it writes `renders/hopasap-instagram-final.mp4` (renders are not stored in the repo).
 
 ## Open it and keep editing
 
@@ -33,6 +33,7 @@ compositions/logo-end.html  logo end card
 assets/clips/processed/     plate-blurred, voice-cleaned, SDR clips (full length)
 assets/audio/               continuous clean voice for clip 3
 assets/sfx/                 custom sound effects (generated with ElevenLabs)
+assets/music/               hip-hop beat under the car reveal (ElevenLabs)
 assets/hopasap-logo-reversed.svg
 processing/                 scripts and data used to make the processed clips
 skills/                     HyperFrames agent skills (Apache-2.0, vendored)
@@ -46,4 +47,4 @@ The original iPhone footage is intentionally **not** included: it has unblurred 
 
 - Built with HyperFrames by HeyGen (Apache-2.0). The skills in `skills/` are from [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes); see `skills/LICENSE-hyperframes`.
 - Plate detection: YOLOv11 licence-plate model by morsetechlab (Hugging Face).
-- Sound effects: ElevenLabs.
+- Sound effects, beat and end-card voice: ElevenLabs.

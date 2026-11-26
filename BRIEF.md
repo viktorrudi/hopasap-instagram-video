@@ -10,7 +10,7 @@ status: delivered
 
 A 20 s vertical (1080 × 1920, 30 fps) Czech-language Instagram reel for the brand **hopasap**. The story: a woman looks for hopasap and heads for a yellow Lamborghini. A guy stops her ("Ne, ne, ne! Tohle není hopasap. Pojď sem!"), shows her an old silver Daihatsu ("Tohle je hopasap."), and the car is revealed with over-the-top hype effects. It ends on a black pause and the hopasap logo, with the voiceover "Již brzy v Brně a okolí."
 
-Final render: `renders/hopasap-instagram-final.mp4` (-15 LUFS, peak -1.8 dBFS).
+Final render: `npm run render` writes `renders/hopasap-instagram-final.mp4` (about -15 LUFS, peak -1.0 dBFS). Renders are not committed.
 
 ## Timeline (root `index.html`)
 
@@ -30,6 +30,7 @@ Clips 4 and 5 (tunnel and taxi) were cut. Their processed files remain in `asset
 
 - **Footage.** `assets/clips/processed/IMG_*.mp4`: full-length, 1080 × 1920, 60 fps H.264. iPhone HLG was tone-mapped to SDR with HyperFrames' hable curve. Number plates are blurred (YOLOv11 plate detector, smoothed tracks, feathered blur), and the audio is voice-cleaned. Timing matches the iPhone originals, so `data-media-start` values are original-file seconds. The originals are not in the repo: they contain unblurred plates and GPS metadata.
 - **Audio.** Each clip's audio chain: mono, 85 Hz high-pass, RNNoise (`arnndn`), FFT denoise, EQ (−2.5 dB at 230 Hz, +3 dB at 3.2 kHz), de-esser, compressor, gain to about −14 LUFS and a limiter (`processing/clean_audio.sh`). Clip 3's three video pieces are muted. Their voice plays from one continuous track, `#clip-03-voice` (`assets/audio/IMG_4755-clean.wav`), so speech is natural through the slow motion.
+- **Beat.** `assets/music/beat-hiphop-90bpm.mp3` (ElevenLabs), played as `#music-beat` from 11.19 to 14.04 s. Its first kick lands on the slow-mo impact, it ducks under the voice and stops as the camera pulls back.
 - **Voiceover.** `assets/audio/vo-jiz-brzy-v-brne.mp3` (ElevenLabs voice, supplied by the client), played at 17.0 s as `#vo-jiz-brzy`.
 - **Sound effects.** `assets/sfx/el-*.mp3` were generated with ElevenLabs: ramp whoosh, slow-mo bass drop, two chrome glints, the cut swoosh and the logo "neon switch-on".
 - **Car reveal, visuals.**

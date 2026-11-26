@@ -12,6 +12,5 @@ assets/clips/*.MOV
 assets/clips/*.mov
 source-metadata.json
 
-# Renders: only the final delivery is tracked
-renders/*
-!renders/hopasap-instagram-final.mp4
+# Renders are local output (npm run render)
+renders/
