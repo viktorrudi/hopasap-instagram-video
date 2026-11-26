@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs" data-resolution="portrait">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=1080, height=1920"><title>Hopasap Instagram 2</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1080px; height: 1920px; background: #000; overflow: hidden; }
+#root { position: relative; width: 100%; height: 100%; }
+.footage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: contain; z-index: 1; }
+#hype-cam { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
+.sparkle { position: absolute; left: 0; top: 0; width: 150px; height: 150px; z-index: 3; opacity: 0; pointer-events: none; }
+.sparkle svg { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 10px rgba(255,255,255,0.95)) drop-shadow(0 0 26px rgba(150,200,255,0.8)); }
+#car-hype { z-index: 5; }
+#logo-end { z-index: 10; }
+#captions-split-split { z-index: 20; }
+</style></head><body>
+<div data-hf-id="hf-gknq" id="root" data-composition-id="main" data-start="0" data-duration="18.51" data-width="1080" data-height="1920" data-fps="30">
+<!-- Footage, in recording order: processed copies of the originals (SDR tone-mapped, number plates blurred, voice-cleaned and loudness-normalised audio). Same timing as the originals, so data-media-start values are original-file seconds. -->
+<!-- Clip 1 (IMG_4760): go-kart hall. She heads for a kart, he stops her. No dialogue; the hall ambience is kept quieter than speech. -->
+<video data-hf-id="hf-nqrr" id="clip-01-img-4760" class="footage" src="assets/clips/processed/IMG_4760.mp4" data-start="0" data-duration="3.41" data-media-start="1.41" data-track-index="1" data-has-audio="true" data-volume="1" playsinline preload="metadata" aria-label="01 IMG_4760"></video>
+<!-- Clip 2 (IMG_4768): to camera, "Ne, ne. Tohle není hopasap. Pojď." Uses the second, scripted run of the line (source 5.6 s on). -->
+<video data-hf-id="hf-ocxi" id="clip-02-img-4768" class="footage" src="assets/clips/processed/IMG_4768.mp4" data-start="3.41" data-duration="3.4" data-media-start="5.6" data-track-index="1" data-has-audio="true" data-volume="1" playsinline preload="metadata" aria-label="02 IMG_4768"></video>
+<!-- Camera wrapper for the van reveal: punch-in, impact shake and pull-out are keyframed on #hype-cam in the main timeline. Sparkles ride inside it so they stay on the headlight and badge. -->
+<div id="hype-cam">
+<!-- Clip 3 (IMG_4772): the van. Starts after the off-camera "Jdeme" cue. The picture runs through his walk-off; the voice is on #clip-03-voice.
+     Speed ramp right after "…hopasap!": 3x whip onto the van (8.43 s), 0.4x slow motion on the headlight (8.88–9.67 s), back to 1x at 9.82 s.
+     The ramp consumes exactly the source time it lasts, so the picture is back in sync with the voice from 9.82 s. -->
+<video data-hf-id="hf-l0ng" id="clip-03-img-4772" class="footage" src="assets/clips/processed/IMG_4772.mp4" data-start="6.81" data-duration="7.7" data-media-start="1.3" data-track-index="1" muted data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;rate&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:1},{&quot;t&quot;:1.62,&quot;v&quot;:1},{&quot;t&quot;:1.72,&quot;v&quot;:3},{&quot;t&quot;:1.92,&quot;v&quot;:3},{&quot;t&quot;:2.07,&quot;v&quot;:0.4},{&quot;t&quot;:2.86,&quot;v&quot;:0.4},{&quot;t&quot;:3.01,&quot;v&quot;:1},{&quot;t&quot;:7.7,&quot;v&quot;:1}]}]}" playsinline preload="metadata" aria-label="03 IMG_4772"></video>
+  <div id="spark-headlight" class="sparkle"><svg viewBox="-50 -50 100 100"><path d="M0-50C3-12 12-3 50 0C12 3 3 12 0 50C-3 12-12 3-50 0C-12-3-3-12 0-50Z" fill="#fff"/></svg></div>
+  <div id="spark-headlight-2" class="sparkle"><svg viewBox="-50 -50 100 100"><path d="M0-50C3-12 12-3 50 0C12 3 3 12 0 50C-3 12-12 3-50 0C-12-3-3-12 0-50Z" fill="#fff"/></svg></div>
+  <div id="spark-badge" class="sparkle"><svg viewBox="-50 -50 100 100"><path d="M0-50C3-12 12-3 50 0C12 3 3 12 0 50C-3 12-12 3-50 0C-12-3-3-12 0-50Z" fill="#fff"/></svg></div>
+  <div id="spark-badge-2" class="sparkle"><svg viewBox="-50 -50 100 100"><path d="M0-50C3-12 12-3 50 0C12 3 3 12 0 50C-3 12-12 3-50 0C-12-3-3-12 0-50Z" fill="#fff"/></svg></div>
+</div>
+<!-- Clip 3 voice. "Na shledanou" was said twice (two takes): the voice stops after the first one (source 7.7 s), so the repeat at 7.75–8.3 s is cut while the picture continues. -->
+<audio data-hf-id="hf-49rm" id="clip-03-voice" src="assets/audio/IMG_4772-clean.wav" data-start="6.81" data-duration="6.4" data-media-start="1.3" data-track-index="0" data-volume="1" data-fade-out="0.06"></audio>
+<!-- Van reveal sound design (custom SFX generated with ElevenLabs, assets/sfx/el-*.mp3). -->
+<audio id="sfx-ramp-whoosh" src="assets/sfx/el-ramp-whoosh.mp3" data-start="8.43" data-duration="0.9" data-media-start="0" data-track-index="3" data-volume="0.22" data-fade-out="0.2"></audio>
+<audio id="sfx-slowmo-drop" src="assets/sfx/el-slowmo-drop.mp3" data-start="8.84" data-duration="2.56" data-media-start="0" data-track-index="4" data-volume="0.1" data-fade-out="1.1"></audio>
+<audio id="sfx-glint-headlight" src="assets/sfx/el-glint.mp3" data-start="8.99" data-duration="1" data-media-start="0" data-track-index="5" data-volume="0.45"></audio>
+<audio id="sfx-sheen-swoosh" src="assets/sfx/el-cut-swoosh.mp3" data-start="9.78" data-duration="0.6" data-media-start="0" data-track-index="3" data-volume="0.3"></audio>
+<audio id="sfx-glint-badge" src="assets/sfx/el-glint.mp3" data-start="11.31" data-duration="1" data-media-start="0" data-track-index="5" data-volume="0.45"></audio>
+<!-- Hip-hop beat under the van reveal (ElevenLabs): first kick on the 8.84 s slow-mo impact, about one bar. Ducks under "Ah, hopasap!" and "Tak já jdu na to". -->
+<audio id="music-beat" data-timeline-role="music" src="assets/music/beat-hiphop-90bpm.mp3" data-start="8.84" data-duration="2.85" data-media-start="0" data-track-index="6" data-volume="0.45" data-fade-out="0.3" data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;volume&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:1},{&quot;t&quot;:0.15,&quot;v&quot;:1},{&quot;t&quot;:0.24,&quot;v&quot;:0.6},{&quot;t&quot;:1.72,&quot;v&quot;:0.6},{&quot;t&quot;:1.85,&quot;v&quot;:1},{&quot;t&quot;:2.25,&quot;v&quot;:1},{&quot;t&quot;:2.33,&quot;v&quot;:0.65},{&quot;t&quot;:2.85,&quot;v&quot;:0.65}]}]}"></audio>
+<!-- Van reveal light effects: impact flash, headlight streak and bloom, vignette, brand-orange light leak, sheen over the van front, badge streak. -->
+<div id="car-hype" class="clip" data-composition-id="car-hype" data-composition-src="compositions/car-hype.html" data-start="8.43" data-duration="3.6" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+<!-- End card: logo switch-on sound and the "Již brzy v Brně a okolí" voiceover (ElevenLabs voice). -->
+<audio data-hf-id="hf-sax8" id="sfx-logo-on" src="assets/sfx/el-logo-on.mp3" data-start="14.51" data-duration="1.5" data-media-start="0" data-track-index="1" data-volume="0.4" data-fade-out="0.6"></audio>
+<audio data-hf-id="hf-lkur" id="vo-jiz-brzy" src="assets/audio/vo-jiz-brzy-v-brne.mp3" data-start="15.15" data-duration="2.35" data-media-start="0" data-track-index="2" data-volume="1.25"></audio>
+<div data-hf-id="hf-6k1n" id="logo-end" class="clip" data-composition-id="logo-end" data-composition-src="compositions/logo-end.html" data-start="14.51" data-duration="4" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+<!-- Czech subtitles: one captions track. -->
+<div data-hf-id="hf-qm9w" data-playback-start="7.887" id="captions-split-split" class="clip" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="3.41" data-duration="15.1" data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920"></div>
+</div><script>
+(function () {
+  var tl = gsap.timeline({ paused: true });
+  var cam = "#hype-cam";
+  // Origin on the van's headlight (left, lower third) so the punch-in keeps it in frame.
+  tl.set(cam, { transformOrigin: "20% 72%", scale: 1, x: 0, y: 0 }, 0);
+  // 8.43 s: whip onto the van (3x). A little push builds momentum.
+  tl.to(cam, { scale: 1.05, duration: 0.41, ease: "power2.in" }, 8.43);
+  // 8.84 s: slow motion lands on the headlight. Punch in, shake, then a slow push.
+  tl.to(cam, { scale: 1.16, duration: 0.14, ease: "expo.out" }, 8.84);
+  tl.to(cam, { keyframes: [
+    { x: 18, y: -12, duration: 0.033 }, { x: -15, y: 10, duration: 0.04 }, { x: 11, y: -8, duration: 0.045 },
+    { x: -7, y: 5, duration: 0.05 }, { x: 4, y: -3, duration: 0.055 }, { x: 0, y: 0, duration: 0.06 }
+  ], ease: "none" }, 8.84);
+  tl.to(cam, { scale: 1.22, duration: 0.83, ease: "none" }, 8.98);
+  // 9.82 s: back to 1x. Pull out fast, slow push across the van front, settle before "Tak já jdu na to".
+  tl.to(cam, { scale: 1.03, duration: 0.55, ease: "power3.out" }, 9.81);
+  tl.to(cam, { scale: 1.08, duration: 1.1, ease: "none" }, 10.36);
+  tl.to(cam, { scale: 1, duration: 0.45, ease: "power2.inOut" }, 11.46);
+
+  // Sparkles on the headlight and the Opel badge: positions follow the footage (measured on the processed clip).
+  function sparkle(sel, t, from, to, dur, size) {
+    tl.set(sel, { xPercent: -50, yPercent: -50, x: from[0], y: from[1], scale: 0, rotation: 0, opacity: 1 }, t);
+    tl.to(sel, { x: to[0], y: to[1], duration: dur, ease: "none" }, t);
+    tl.to(sel, { scale: size, rotation: 45, duration: dur * 0.45, ease: "back.out(2)" }, t);
+    tl.to(sel, { scale: 0, rotation: 110, duration: dur * 0.55, ease: "power2.in" }, t + dur * 0.45);
+    tl.set(sel, { opacity: 0 }, t + dur);
+  }
+  sparkle("#spark-headlight", 8.99, [245, 1320], [345, 1318], 0.5, 1.1);
+  sparkle("#spark-headlight-2", 9.15, [205, 1500], [300, 1495], 0.4, 0.55);
+  sparkle("#spark-badge", 11.31, [225, 1456], [320, 1398], 0.5, 0.95);
+  sparkle("#spark-badge-2", 11.45, [380, 1420], [430, 1392], 0.36, 0.5);
+
+  window.__timelines["main"] = tl;
+})();
+</script></body></html>

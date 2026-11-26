@@ -1,0 +1,16 @@
+# HyperFrames caches and local artifacts (regenerated automatically)
+.hyperframes/
+.transcode-cache/
+.thumbnails/
+.waveform-cache/
+.media/
+node_modules/
+.DS_Store
+
+# Original iPhone footage: unblurred number plates and GPS location metadata. Never publish.
+assets/clips/*.MOV
+assets/clips/*.mov
+source-metadata.json
+
+# Renders are local output (npm run render)
+renders/

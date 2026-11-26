@@ -1,44 +1,38 @@
-# hopasap — Instagram Reel (HyperFrames project)
+# hopasap — Instagram Reels (HyperFrames projects)
 
-A 20 s vertical (1080 × 1920) Czech-language Instagram Reel for **hopasap**, built with [HyperFrames](https://hyperframes.heygen.com): HTML, CSS and GSAP rendered to video, and editable in the browser.
+Two vertical (1080 × 1920) Czech-language Instagram Reels for **hopasap**, built with [HyperFrames](https://hyperframes.heygen.com): HTML, CSS and GSAP rendered to video, and editable in the browser. Each reel is its own HyperFrames project in its own folder.
 
-▶ **Final video:** run `npm run render`; it writes `renders/hopasap-instagram-final.mp4` (renders are not stored in the repo).
+| Folder | Reel | Length | Story |
+| --- | --- | --- | --- |
+| [`hopasap-instagram/`](hopasap-instagram/) | Reel 1: the Daihatsu | 20 s | She heads for a yellow Lamborghini, he stops her and shows her an old silver Daihatsu. |
+| [`hopasap-instagram-2/`](hopasap-instagram-2/) | Reel 2: the van | 18.5 s | Go-kart hall, then he shows her an old red Opel van. She pulls off her balaclava. |
 
-## Open it and keep editing
+Both end on the hopasap logo with the voiceover "Již brzy v Brně a okolí." They share the same caption style, end card, sound effects and reveal treatment (speed ramp, punch-in, sparkles, light effects).
 
-Requirements: Node.js 22+, `ffmpeg`/`ffprobe` on PATH, and Chrome or another Chromium browser.
+## Open a reel and keep editing
+
+Requirements: Node.js 22+, `ffmpeg`/`ffprobe` on PATH, and Chrome or another Chromium browser. Every command runs **inside the reel's folder**:
 
 ```bash
+cd hopasap-instagram-2                               # or hopasap-instagram
 npx --yes hyperframes@0.9.96 preview --background   # starts Studio in the background
 npx --yes hyperframes@0.9.96 preview --status       # prints the Studio URL to open
+npm run check                                       # after every edit
+npm run render                                      # final MP4 in renders/ (not committed)
+npx --yes hyperframes@0.9.96 preview --stop         # when done
 ```
 
-Open the printed Studio URL, e.g. `http://localhost:3002/#project/hopasap-instagram`, in your browser.
-
-| Command | What it does |
-| --- | --- |
-| `npm run check` | Lint plus runtime, layout and contrast checks. Run after every edit. |
-| `npm run render` | Renders `renders/hopasap-instagram-final.mp4` at delivery quality. |
-| `npx --yes hyperframes@0.9.96 preview --stop` | Stops the background preview. |
+Both previews can run at the same time; each gets its own port.
 
 Handing this to someone with an AI coding agent? Give them [`HANDOFF.md`](HANDOFF.md).
 
-## What's inside
+## Layout
 
 ```text
-index.html                  root composition: footage, camera wrapper, audio, scene hosts
-compositions/captions.html  Czech subtitles (one captions track, word-by-word highlight)
-compositions/car-hype.html  car-reveal light effects (flash, streaks, vignette, leak, sheen)
-compositions/logo-end.html  logo end card
-assets/clips/processed/     plate-blurred, voice-cleaned, SDR clips (full length)
-assets/audio/               continuous clean voice for clip 3
-assets/sfx/                 custom sound effects (generated with ElevenLabs)
-assets/music/               hip-hop beat under the car reveal (ElevenLabs)
-assets/hopasap-logo-reversed.svg
-processing/                 scripts and data used to make the processed clips
-skills/                     HyperFrames agent skills (Apache-2.0, vendored)
-BRIEF.md                    timeline, decisions and editing conventions
-HANDOFF.md                  prompt for the next person's coding agent
+hopasap-instagram/     reel 1 (README.md, BRIEF.md, index.html, compositions/, assets/, processing/)
+hopasap-instagram-2/   reel 2 (same structure)
+skills/                HyperFrames agent skills (Apache-2.0, vendored), shared by both reels
+HANDOFF.md             setup prompt for the next person's coding agent
 ```
 
 The original iPhone footage is intentionally **not** included: it has unblurred number plates and GPS metadata.

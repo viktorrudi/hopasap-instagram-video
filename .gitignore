@@ -1,16 +1,20 @@
-# HyperFrames caches and local artifacts (regenerated automatically)
-.hyperframes/
-.transcode-cache/
-.thumbnails/
-.waveform-cache/
-.media/
-node_modules/
+# Each reel folder has its own .gitignore (caches, renders, original footage).
 .DS_Store
+node_modules/
 
-# Original iPhone footage: unblurred number plates and GPS location metadata. Never publish.
-assets/clips/*.MOV
-assets/clips/*.mov
+# Agent-local skill installs (copied from skills/ by each person)
+.claude/
+.agents/
+
+# Original iPhone footage anywhere: unblurred number plates and GPS location metadata. Never publish.
+*.MOV
+*.mov
 source-metadata.json
 
-# Renders are local output (npm run render)
-renders/
+# Left over in older clones from when reel 1 lived at the repo root
+/.hyperframes/
+/.transcode-cache/
+/.thumbnails/
+/.waveform-cache/
+/.media/
+/renders/
